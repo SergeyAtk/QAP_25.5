@@ -55,8 +55,8 @@ def test_page_my_pets():
     my_pets = pytest.driver.find_element(By.CSS_SELECTOR,
                                          'div[class=".col-sm-4 left"]')
     number_my_pets = int(my_pets.text.split ('\n')[1].split(':')[1])
-# just for check myself, can be removed if future
-    print('\n Моих питомцев: ', number_my_pets)
+    # just for check myself, can be removed if future
+    #print('\n Моих питомцев: ', number_my_pets)
 
 # составляем полный список данных моих питомцев
     elements = pytest.driver.find_elements(By.XPATH, '//tbody/tr/td')
@@ -95,6 +95,6 @@ def test_page_my_pets():
     assert len(pet_names) == len(set(pet_names)), 'Имена питомцев повторяются!'
 
     #just for check my code
-    print(pet_names, '\n', pet_breeds, '\n', pet_age)
+    #print(pet_names, '\n', pet_breeds, '\n', pet_age)
 
 
